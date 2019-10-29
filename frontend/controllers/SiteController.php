@@ -208,8 +208,7 @@ class SiteController extends Controller
              $model->Last_name=$_POST['Usersignup']['Last_name'];
              $model->Email=$_POST['Usersignup']['Email'];
              $model->save();
-        $result=Products::find()->All();
-        return $this->render('index',['result' => $result]);
+        return $this->goBack();
         }
         return $this->render('usersignup',['model' => $model]);
     }
